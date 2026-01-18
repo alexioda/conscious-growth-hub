@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscious Growth | Architecture for the Modern Soul</title>
+    <meta name="description" content="Energy Leadership Coaching and Digital Tools for High Performers.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: { 50: '#fafaf9', 100: '#f5f5f4', 800: '#292524', 900: '#1c1917' },
+                        gold: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-stone-50/90 backdrop-blur-md border-b border-stone-200 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-stone-900 text-white flex items-center justify-center font-serif italic text-lg">A</div>
+                <span class="font-serif text-xl tracking-wide font-semibold text-stone-900">Adaptiv</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-stone-500 uppercase tracking-widest text-[10px]">
+                <a href="#philosophy" class="hover:text-stone-900 transition-colors">Philosophy</a>
+                <a href="#ecosystem" class="hover:text-stone-900 transition-colors">The Ecosystem</a>
+                <a href="#coaching" class="hover:text-stone-900 transition-colors">Coaching</a>
+            </div>
+            <a href="https://app.consciousgrowth.com" target="_blank" class="px-6 py-2 bg-stone-900 text-white text-[10px] font-bold uppercase tracking-widest hover:bg-stone-700 transition-all rounded-full flex items-center gap-2">
+                <i data-lucide="zap" class="w-3 h-3"></i> Launch App
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-48 pb-32 px-6 max-w-4xl mx-auto text-center">
+        <span class="inline-block py-1 px-3 border border-stone-300 rounded-full text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-8 animate-fade-up">Energy Leadership™ Integration</span>
+        
+        <h1 class="text-5xl md:text-7xl font-serif italic text-stone-900 mb-8 leading-[1.1] animate-fade-up delay-100">
+            Stop Managing Time.<br>Start Architecting Energy.
+        </h1>
+        
+        <p class="text-lg text-stone-500 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-up delay-200 font-light">
+            You aren't burnt out because you do too much. You are burnt out because you are leaking energy. We use clinical data and daily protocols to seal the leaks.
+        </p>
+        
+        <div class="flex flex-col md:flex-row justify-center gap-4 animate-fade-up delay-300">
+            <a href="https://app.consciousgrowth.com" target="_blank" class="px-10 py-4 bg-stone-900 text-white font-sans text-xs font-bold uppercase tracking-widest hover:shadow-xl hover:-translate-y-1 transition-all rounded-full">
+                Use Free Tool
+            </a>
+            <a href="#ecosystem" class="px-10 py-4 bg-white border border-stone-200 text-stone-900 font-sans text-xs font-bold uppercase tracking-widest hover:border-stone-400 transition-all rounded-full">
+                Explore Protocol
+            </a>
+        </div>
+    </header>
+
+    <!-- The Ecosystem -->
+    <section id="ecosystem" class="py-24 bg-stone-100 px-6 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="font-serif text-4xl italic text-stone-900 mb-4">The Ecosystem</h2>
+                <p class="text-stone-500 max-w-lg mx-auto">A hierarchy of intervention. Choose the level of support your nervous system needs right now.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- 1. The Daily Tool (App) -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-stone-200 flex flex-col group">
+                    <div class="w-14 h-14 bg-stone-50 rounded-xl flex items-center justify-center mb-8 text-stone-900 group-hover:bg-stone-900 group-hover:text-white transition-colors">
+                        <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-stone-900 italic mb-2">Adaptiv App</h3>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-gold-600 mb-4">Daily Maintenance (Free)</p>
+                    <p class="text-stone-500 text-sm leading-relaxed mb-8 flex-1">
+                        The pocket companion for acute stress. Somatic processing, breathing regulation, and rapid cognitive reframing in under 3 minutes.
+                    </p>
+                    <a href="https://app.consciousgrowth.com" target="_blank" class="w-full py-4 text-center border border-stone-200 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-stone-50 transition-colors flex items-center justify-center gap-2">
+                        Launch Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                    </a>
+                </div>
+
+                <!-- 2. The Protocol (Field Guide) -->
+                <div class="bg-stone-900 p-10 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-stone-800 flex flex-col transform md:-translate-y-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-32 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="w-14 h-14 bg-stone-800 rounded-xl flex items-center justify-center mb-8 text-gold-400 relative z-10">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white italic mb-2 relative z-10">Alchemist Field Guide</h3>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-gold-400 mb-4 relative z-10">7-Cycle Genesis Protocol</p>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-8 flex-1 relative z-10">
+                        The deep dive. An interactive web experience to permanently shift your baseline from "Stuck" (Level 1) to "Creator" (Level 5).
+                    </p>
+                    <!-- Link to your Gumroad or the Subdomain for Guide -->
+                    <a href="https://guide.consciousgrowth.com" target="_blank" class="w-full py-4 text-center bg-gold-500 text-stone-900 font-bold rounded-xl text-[10px] uppercase tracking-widest hover:bg-gold-400 transition-colors relative z-10">
+                        Get Access
+                    </a>
+                </div>
+
+                <!-- 3. The Clinical (ELI) -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-stone-200 flex flex-col group">
+                    <div class="w-14 h-14 bg-stone-50 rounded-xl flex items-center justify-center mb-8 text-stone-900 group-hover:bg-stone-900 group-hover:text-white transition-colors">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-stone-900 italic mb-2">ELI Assessment</h3>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-4">Clinical Diagnostic</p>
+                    <p class="text-stone-500 text-sm leading-relaxed mb-8 flex-1">
+                        The Energy Leadership™ Index. A research-backed assessment + 90 minute debrief to uncover your specific energetic DNA.
+                    </p>
+                    <a href="https://calendly.com/alexioda" target="_blank" class="w-full py-4 text-center border border-stone-200 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-stone-50 transition-colors">
+                        Book Session
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rescue Protocols (Burnout & Stress Tools) -->
+    <section class="py-20 px-6 max-w-4xl mx-auto border-t border-stone-200">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 bg-stone-100 p-8 rounded-2xl border border-stone-200">
+            <div>
+                <h3 class="font-serif text-2xl text-stone-900 italic mb-2">Acute Rescue Protocols</h3>
+                <p class="text-stone-500 text-sm max-w-md">Immediate triage tools for Burnout Recovery and Stress Transformation. Access the interactive workbooks.</p>
+            </div>
+            <!-- Link to your 'Rescue' subdomain or Vercel project -->
+            <a href="https://rescue.consciousgrowth.com" target="_blank" class="px-8 py-3 bg-white border border-stone-200 text-stone-900 font-bold text-[10px] uppercase tracking-widest rounded-full hover:border-stone-400 transition-all whitespace-nowrap flex items-center gap-2">
+                <i data-lucide="life-buoy" class="w-4 h-4"></i> Access Protocols
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="philosophy" class="py-24 px-6 bg-white border-t border-stone-200">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2">
+                <div class="aspect-[4/5] bg-stone-200 rounded-2xl overflow-hidden relative shadow-2xl">
+                    <!-- YOUR PICTURE -->
+                    <img src="./alex.jpg" alt="Alex Ioda" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-gold-600 mb-4 block">The Architect</span>
+                <h2 class="font-serif text-5xl italic text-stone-900 mb-8">Alex Ioda</h2>
+                <p class="text-stone-600 leading-relaxed mb-6 font-light text-lg">
+                    I am not a guru. I am a strategist. As an Energy Leadership™ Master Practitioner, I build tools that bridge the gap between spiritual awareness and practical performance.
+                </p>
+                <p class="text-stone-600 leading-relaxed mb-10 font-light text-lg">
+                    My goal is simple: To give you the architecture to thrive in chaos, so you don't just survive your career—you lead it.
+                </p>
+                <div class="flex gap-6 items-center">
+                    <a href="https://calendly.com/alexioda" class="text-stone-900 font-bold border-b border-stone-900 pb-1 text-[10px] uppercase tracking-widest hover:text-gold-600 hover:border-gold-600 transition-all">Work With Me</a>
+                    <a href="https://www.linkedin.com/in/YOUR-PROFILE" class="text-stone-500 hover:text-stone-900 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-16 px-6 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-stone-800 text-white flex items-center justify-center font-serif italic text-sm">A</div>
+                <span class="font-serif italic text-white text-lg">Conscious Growth</span>
+            </div>
+            <div class="flex gap-8 text-[10px] uppercase tracking-widest font-bold text-stone-500">
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-white transition-colors">Facebook</a>
+                <a href="mailto:alex@consciousgrowth.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <p class="text-[10px] opacity-30 tracking-widest">&copy; 2026 Alex Ioda. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
