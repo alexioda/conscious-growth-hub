@@ -12,8 +12,11 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
+    <!-- Icons (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Lemon Squeezy Overlay Script -->
+    <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
 
     <script>
         tailwind.config = {
@@ -25,7 +28,9 @@
                     },
                     colors: {
                         stone: { 50: '#fafaf9', 100: '#f5f5f4', 800: '#292524', 900: '#1c1917' },
-                        gold: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }
+                        gold: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' },
+                        silver: { 400: '#94a3b8' },
+                        charcoal: { 900: '#1c1917' }
                     },
                     animation: {
                         'fade-up': 'fadeUp 0.8s ease-out forwards',
@@ -53,8 +58,7 @@
     <nav class="fixed w-full bg-stone-50/90 backdrop-blur-md border-b border-stone-200 z-50">
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <!-- Logo Mark -->
-                <div class="w-8 h-8 bg-stone-900 text-white flex items-center justify-center font-serif italic text-lg">L</div>
+                <div class="w-8 h-8 bg-stone-900 text-white flex items-center justify-center font-serif italic text-lg">A</div>
                 <span class="font-serif text-xl tracking-wide font-semibold text-stone-900">LiveAdaptiv</span>
             </div>
             
@@ -65,7 +69,9 @@
                 </a>
                 <a href="#philosophy" class="hover:text-stone-900 transition-colors">Philosophy</a>
                 <a href="#ecosystem" class="hover:text-stone-900 transition-colors">The Ecosystem</a>
+                <a href="#enterprise" class="hover:text-stone-900 transition-colors">Enterprise</a>
                 <a href="#architecture" class="hover:text-stone-900 transition-colors">Inner Architecture</a>
+                <a href="dashboard.html" class="hover:text-stone-900 transition-colors font-bold">Dashboard</a>
             </div>
 
             <!-- CTA -->
@@ -78,31 +84,43 @@
     <!-- Hero Section -->
     <header class="pt-48 pb-32 px-6 max-w-4xl mx-auto text-center">
         <span class="inline-block py-1 px-3 border border-stone-300 rounded-full text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-8 animate-fade-up">Energy Leadership™ Integration</span>
-        
         <h1 class="text-5xl md:text-7xl font-serif italic text-stone-900 mb-8 leading-[1.1] animate-fade-up delay-100">
             Stop Managing Stress.<br>Architect Your Energy.
         </h1>
-        
         <p class="text-lg text-stone-500 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-up delay-200 font-light">
             You aren't burnt out because you do too much. You are burnt out because you are leaking energy. We use clinical data and daily protocols to seal the leaks and restore your sovereignty.
         </p>
-        
         <div class="flex flex-col md:flex-row justify-center gap-4 animate-fade-up delay-300">
-            <!-- PRIMARY ACTION: THE AUDIT -->
             <a href="kinetic_audit_lead_magnet.html" class="px-10 py-4 bg-stone-900 text-white font-sans text-xs font-bold uppercase tracking-widest hover:shadow-xl hover:-translate-y-1 transition-all rounded-full flex items-center justify-center gap-2">
                 <i data-lucide="activity" class="w-4 h-4"></i> Take The Kinetic Audit
             </a>
-            
-            <!-- SECONDARY ACTION: THE APP -->
             <a href="https://app.liveadaptiv.com" target="_blank" class="px-10 py-4 bg-white border border-stone-200 text-stone-900 font-sans text-xs font-bold uppercase tracking-widest hover:border-gold-500 hover:text-gold-600 transition-all rounded-full flex items-center justify-center gap-2">
                 Use Free Tools
             </a>
         </div>
-
         <p class="mt-6 text-[10px] uppercase tracking-widest text-stone-400 animate-fade-up delay-300">
             Free Diagnostic • No Email Required to Start
         </p>
     </header>
+
+    <!-- System Integration Bridge -->
+    <section class="py-12 px-6 max-w-5xl mx-auto">
+        <div class="bg-charcoal-900 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl border border-stone-800">
+            <div class="absolute -top-24 -right-24 p-32 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 max-w-2xl">
+                <span class="inline-block py-1 px-3 border border-stone-700 rounded-full text-[10px] uppercase tracking-[0.2em] text-gold-500 mb-4">System Integration</span>
+                <h2 class="font-serif text-3xl italic text-white mb-4">The Command Center</h2>
+                <p class="text-stone-400 text-sm leading-relaxed">
+                    Purchased a LiveAdaptiv digital tool or deck? Download your <strong>START_HERE_Access_Command_Center.pdf</strong> to sync your assets and unlock your full application ecosystem.
+                </p>
+            </div>
+            <div class="relative z-10 shrink-0 w-full md:w-auto">
+                <a href="START_HERE_Access_Command_Center.pdf" target="_blank" class="w-full md:w-auto px-8 py-4 bg-white text-stone-900 font-bold rounded-xl text-[10px] uppercase tracking-widest hover:bg-stone-200 transition-colors flex items-center justify-center gap-2">
+                    <i data-lucide="download" class="w-4 h-4"></i> Download Command Center
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- The Ecosystem (Product Stack) -->
     <section id="ecosystem" class="py-24 bg-stone-100 px-6 border-t border-stone-200">
@@ -111,25 +129,39 @@
                 <h2 class="font-serif text-4xl italic text-stone-900 mb-4">The Ecosystem</h2>
                 <p class="text-stone-500 max-w-lg mx-auto">A hierarchy of intervention. Choose the level of support your nervous system needs right now.</p>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                
+            <div class="grid md:grid-cols-2 gap-8">
                 <!-- 1. The Daily Tool (App) -->
                 <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-stone-200 flex flex-col group">
                     <div class="w-14 h-14 bg-stone-50 rounded-xl flex items-center justify-center mb-8 text-stone-900 group-hover:bg-stone-900 group-hover:text-white transition-colors">
                         <i data-lucide="smartphone" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-serif text-2xl text-stone-900 italic mb-2">Adaptiv App</h3>
+                    <h3 class="font-serif text-2xl text-stone-900 italic mb-2">Sovereign App</h3>
                     <p class="text-[10px] font-bold uppercase tracking-widest text-gold-600 mb-4">Daily Maintenance (Free)</p>
                     <p class="text-stone-500 text-sm leading-relaxed mb-8 flex-1">
-                        The pocket companion for acute stress. Somatic processing, breathing regulation, and rapid cognitive reframing in under 3 minutes.
+                        The pocket companion for acute stress. Featuring the 90-second flush timer, daily card pulls, and identity planner.
                     </p>
                     <a href="https://app.liveadaptiv.com" target="_blank" class="w-full py-4 text-center border border-stone-200 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-stone-50 transition-colors flex items-center justify-center gap-2">
                         Launch Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
                     </a>
                 </div>
 
-                <!-- 2. The Protocol (Alchemist Guide) -->
+                <!-- 2. The Product (Alchemist Master Deck) -->
+                <div class="bg-stone-900 p-10 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-stone-800 flex flex-col transform md:-translate-y-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-32 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="w-14 h-14 bg-stone-800 rounded-xl flex items-center justify-center mb-8 text-gold-400 relative z-10">
+                        <i data-lucide="layers" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white italic mb-2 relative z-10">The Master Deck</h3>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-gold-400 mb-4 relative z-10">Digital / Physical System ($19)</p>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-8 flex-1 relative z-10">
+                        A 52-card system across four suits: Physics (Hardware), Inquiry (Software), Sovereignty (Agency), and Philosophy (Soul). Biological friction as fuel.
+                    </p>
+                    <a href="https://your-store.lemonsqueezy.com/checkout/buy/PLACEHOLDER?embed=1" class="lemonsqueezy-button w-full py-4 text-center bg-gold-500 text-stone-900 font-bold rounded-xl text-[10px] uppercase tracking-widest hover:bg-gold-400 transition-colors relative z-10">
+                        Get The Deck
+                    </a>
+                </div>
+
+                <!-- 3. The Protocol (Alchemist Field Guide) -->
                 <div class="bg-stone-900 p-10 rounded-2xl shadow-xl hover:shadow-2xl transition-all border border-stone-800 flex flex-col transform md:-translate-y-6 relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-32 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
                     <div class="w-14 h-14 bg-stone-800 rounded-xl flex items-center justify-center mb-8 text-gold-400 relative z-10">
@@ -140,13 +172,12 @@
                     <p class="text-stone-400 text-sm leading-relaxed mb-8 flex-1 relative z-10">
                         The master protocol. Interactive identity shifting, shadow work, and reality creation. Includes the "Somatic Map" and "Script Generator".
                     </p>
-                    <!-- Link to Gumroad/Purchase Page -->
-                    <a href="https://alexioda.gumroad.com/l/roxaxf" target="_blank" class="w-full py-4 text-center bg-gold-500 text-stone-900 font-bold rounded-xl text-[10px] uppercase tracking-widest hover:bg-gold-400 transition-colors relative z-10">
+                    <a href="https://your-store.lemonsqueezy.com/checkout/buy/PLACEHOLDER_GUIDE?embed=1" class="lemonsqueezy-button w-full py-4 text-center bg-gold-500 text-stone-900 font-bold rounded-xl text-[10px] uppercase tracking-widest hover:bg-gold-400 transition-colors relative z-10">
                         Get The Guide
                     </a>
                 </div>
 
-                <!-- 3. The Clinical (ELI) -->
+                <!-- 4. The Clinical (ELI) -->
                 <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-stone-200 flex flex-col group">
                     <div class="w-14 h-14 bg-stone-50 rounded-xl flex items-center justify-center mb-8 text-stone-900 group-hover:bg-stone-900 group-hover:text-white transition-colors">
                         <i data-lucide="activity" class="w-6 h-6"></i>
@@ -160,26 +191,64 @@
                         Book Session
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Acute Rescue Protocols -->
+    <!-- NEW: Enterprise & Clinical Workshops -->
+    <section id="enterprise" class="py-24 px-6 bg-stone-900 border-t border-stone-800 text-stone-300">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <span class="inline-block py-1 px-3 border border-stone-700 rounded-full text-[10px] uppercase tracking-[0.2em] text-gold-500 mb-6">B2B / Organizational Architecture</span>
+                    <h2 class="font-serif text-4xl md:text-5xl italic text-white mb-6">Enterprise & Clinical Teams</h2>
+                    <p class="text-stone-400 leading-relaxed font-light mb-6 text-lg">
+                        We do not do "wellness seminars." We install tech-enabled resilience operating systems for high-liability environments. 
+                    </p>
+                    <p class="text-stone-400 leading-relaxed font-light mb-10 text-lg">
+                        If your team is bleeding efficiency due to high-friction energy, imposter syndrome, or clinical burnout, we provide the architecture to stop the leak. Every engagement includes proprietary interactive Web Apps for real-time regulation.
+                    </p>
+                    <a href="mailto:alexioda@gmail.com?subject=Enterprise Proposal Request - LiveAdaptiv" class="inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-stone-900 font-bold rounded-full text-[10px] uppercase tracking-widest hover:bg-gold-400 transition-colors">
+                        <i data-lucide="briefcase" class="w-4 h-4"></i> Request Corporate Proposal
+                    </a>
+                </div>
+                <div class="lg:w-1/2 grid sm:grid-cols-2 gap-6 w-full">
+                    <div class="p-8 border border-stone-700 rounded-2xl bg-stone-800/50 hover:bg-stone-800 transition-colors flex flex-col">
+                        <div class="w-12 h-12 bg-stone-900 rounded-xl flex items-center justify-center text-gold-400 border border-stone-700 mb-6 shrink-0">
+                            <i data-lucide="building-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-white italic mb-2">The Kinetic Leader</h3>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-4">Corporate / "Big 4" Edition</p>
+                        <p class="text-sm text-stone-400 leading-relaxed flex-1">
+                            Designed for incoming recruits and high-performing associates. Turns "High-Friction Energy" into "Flow." Features live tech-enabled boundary scripting to prevent early attrition.
+                        </p>
+                    </div>
+                    <div class="p-8 border border-stone-700 rounded-2xl bg-stone-800/50 hover:bg-stone-800 transition-colors flex flex-col">
+                        <div class="w-12 h-12 bg-stone-900 rounded-xl flex items-center justify-center text-silver-400 border border-stone-700 mb-6 shrink-0">
+                            <i data-lucide="cross" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-white italic mb-2">Vital Sign Protocol</h3>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-4">Clinical / Healthcare Edition</p>
+                        <p class="text-sm text-stone-400 leading-relaxed flex-1">
+                            Built for high-acuity medical and psychiatric teams. Focuses on crisis regulation, "Scrub-In" psychological rituals, and maintaining clinical safety without sacrificing empathy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acute Rescue Field Guides -->
     <section class="py-20 px-6 max-w-4xl mx-auto border-t border-stone-200">
         <div class="bg-stone-100 p-8 rounded-2xl border border-stone-200">
-            <h3 class="font-serif text-2xl text-stone-900 italic mb-2">Acute Rescue Protocols</h3>
-            <p class="text-stone-500 text-sm max-w-md mb-8">Immediate triage tools for specific conditions. Interactive digital workbooks.</p>
-            
+            <h3 class="font-serif text-2xl text-stone-900 italic mb-2">Acute Rescue Field Guides</h3>
+            <p class="text-stone-500 text-sm max-w-md mb-8">Immediate triage workbooks mapping Biology of Belief, Somatic Mapping, and the Lobster Cycle.</p>
             <div class="flex flex-col md:flex-row gap-4">
-                <!-- Burnout Rescue -->
                 <a href="burnout_rescue.html" target="_blank" class="flex-1 py-4 bg-white border border-stone-200 text-stone-900 font-bold text-[10px] uppercase tracking-widest rounded-xl hover:border-stone-400 hover:bg-stone-50 transition-all flex items-center justify-center gap-2 group">
                     <i data-lucide="battery-warning" class="w-4 h-4 text-stone-400 group-hover:text-stone-900 transition-colors"></i> Burnout Rescue
                 </a>
-                
-                <!-- Stress Transformation -->
                 <a href="stress_transformation_field_guide_master.html" target="_blank" class="flex-1 py-4 bg-white border border-stone-200 text-stone-900 font-bold text-[10px] uppercase tracking-widest rounded-xl hover:border-stone-400 hover:bg-stone-50 transition-all flex items-center justify-center gap-2 group">
-                    <i data-lucide="waves" class="w-4 h-4 text-stone-400 group-hover:text-stone-900 transition-colors"></i> Stress Transformation
+                    <i data-lucide="waves" class="w-4 h-4 text-stone-400 group-hover:text-stone-900 transition-colors"></i> Stress Transformation Guide
                 </a>
             </div>
         </div>
@@ -191,7 +260,7 @@
             <div class="w-12 h-12 bg-stone-200 rounded-full flex items-center justify-center mx-auto mb-6 text-stone-900">
                 <i data-lucide="compass" class="w-6 h-6"></i>
             </div>
-            <h2 class="font-serif text-4xl italic text-stone-900 mb-6">1:1 Inner Architecture</h2>
+            <h2 class="font-serif text-4xl italic text-stone-900 mb-6">Inner Architecture & Mastery</h2>
             <p class="text-lg text-stone-500 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
                 The App provides the tools. The Protocol provides the map. <br>
                 <strong>The Architect provides the Blueprint.</strong> <br><br>
@@ -199,7 +268,10 @@
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="https://calendly.com/alexioda" target="_blank" class="px-10 py-4 bg-stone-900 text-white font-sans text-xs font-bold uppercase tracking-widest hover:bg-gold-600 transition-all rounded-full shadow-lg hover:shadow-xl">
-                    Book Design Session
+                    Book 1:1 Design Session
+                </a>
+                <a href="mailto:alexioda@gmail.com?subject=Kinetic Life Cohort Waitlist" class="px-10 py-4 bg-white border border-stone-200 text-stone-900 font-sans text-xs font-bold uppercase tracking-widest hover:border-stone-400 transition-all rounded-full shadow-sm hover:shadow-md">
+                    Join Cohort Waitlist
                 </a>
             </div>
         </div>
@@ -221,17 +293,13 @@
                     I am not a guru. I am a strategist. From <strong>10 years as a Crisis Counselor</strong> and <strong>Psychologist in Maximum Security</strong> to leading clinical teams at Rockland Psychiatric Center, my methodology is battle-tested.
                 </p>
                 <p class="text-stone-600 leading-relaxed mb-10 font-light text-lg">
-                    I take survival protocols from the frontlines of psychology and turn them into success protocols for the boardroom.
+                    I take survival protocols from the frontlines of psychology and turn them into success protocols for the professional world. If it kept an inmate regulated in a cell, it will keep a consultant focused in a boardroom.
                 </p>
-                
-                <!-- SOCIAL LINKS & CTA -->
                 <div class="flex flex-wrap gap-6 items-center">
                     <a href="https://calendly.com/alexioda" class="text-stone-900 font-bold border-b-2 border-stone-900 pb-1 text-[10px] uppercase tracking-widest hover:text-gold-600 hover:border-gold-600 transition-all">Design With Me</a>
-                    
                     <a href="https://www.facebook.com/share/183ACk6b2y/" target="_blank" class="flex items-center gap-2 text-stone-500 hover:text-stone-900 transition-colors text-[10px] uppercase tracking-widest">
                         <i data-lucide="facebook" class="w-5 h-5"></i> Community
                     </a>
-                    
                     <a href="https://www.linkedin.com/in/alex-ioda-5428b76" target="_blank" class="flex items-center gap-2 text-stone-500 hover:text-stone-900 transition-colors text-[10px] uppercase tracking-widest">
                         <i data-lucide="linkedin" class="w-5 h-5"></i> Network
                     </a>
@@ -240,19 +308,23 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with Compliance Links added -->
     <footer class="bg-stone-900 text-stone-400 py-16 px-6 border-t border-stone-800">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-stone-800 text-white flex items-center justify-center font-serif italic text-sm">L</div>
+                <div class="w-8 h-8 bg-stone-800 text-white flex items-center justify-center font-serif italic text-sm">A</div>
                 <span class="font-serif italic text-white text-lg">LiveAdaptiv</span>
             </div>
-            <div class="flex gap-8 text-[10px] uppercase tracking-widest font-bold text-stone-500">
+            
+            <div class="flex flex-wrap justify-center gap-8 text-[10px] uppercase tracking-widest font-bold text-stone-500">
                 <a href="https://www.linkedin.com/in/alex-ioda-5428b76" class="hover:text-white transition-colors">LinkedIn</a>
                 <a href="https://www.facebook.com/share/183ACk6b2y/" class="hover:text-white transition-colors">Facebook</a>
                 <a href="mailto:alexioda@gmail.com" class="hover:text-white transition-colors">Contact</a>
+                <!-- COMPLIANCE LINKS -->
+                <a href="terms.html" class="hover:text-white transition-colors border-l border-stone-700 pl-8">Terms of Service</a>
+                <a href="refund.html" class="hover:text-white transition-colors">Refund Policy</a>
             </div>
-            <p class="text-[10px] opacity-30 tracking-widest">&copy; 2026 Alex Ioda. All Rights Reserved.</p>
+            <p class="text-[10px] opacity-30 tracking-widest">© 2026 Alex Ioda. All Rights Reserved.</p>
         </div>
     </footer>
 
