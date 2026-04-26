@@ -89,7 +89,7 @@ body.menu-open { overflow: hidden; }
   </div>
 </div>
 
-<header class="pt-48 pb-32 px-6 max-w-4xl mx-auto text-center">
+<header class="pt-48 pb-12 px-6 max-w-4xl mx-auto text-center">
 <span class="inline-block py-1 px-3 border border-stone-300 rounded-full text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-8 animate-fade-up">Energy Leadership™ Integration</span>
 <h1 class="text-5xl md:text-7xl font-serif italic text-stone-900 mb-8 leading-[1.1] animate-fade-up delay-100">
 Stop Managing Stress.<br>Architect Your Energy.
@@ -97,19 +97,31 @@ Stop Managing Stress.<br>Architect Your Energy.
 <p class="text-lg text-stone-500 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-up delay-200 font-light">
 You aren't burnt out because you do too much. You are burnt out because you are leaking energy. We use clinical data and daily protocols to seal the leaks and restore your sovereignty.
 </p>
-<div class="flex flex-col md:flex-row justify-center gap-4 animate-fade-up delay-300">
-<a href="https://audit.liveadaptiv.com" target="_blank" class="px-10 py-4 bg-stone-900 text-white font-sans text-xs font-bold uppercase tracking-widest hover:shadow-xl hover:-translate-y-1 transition-all rounded-full flex items-center justify-center gap-2">
-<i data-lucide="activity" class="w-4 h-4"></i> Take The Kinetic Diagnostic
-</a>
-<a href="https://sovereign.liveadaptiv.com" target="_blank" class="px-10 py-4 bg-white border border-stone-200 text-stone-900 font-sans text-xs font-bold uppercase tracking-widest hover:border-gold-500 hover:text-gold-600 transition-all rounded-full flex items-center justify-center gap-2">
-Use Free Tools
-</a>
+
+<div class="flex flex-col items-center gap-6 animate-fade-up delay-300">
+  <a href="https://audit.liveadaptiv.com" target="_blank" class="px-10 py-5 bg-stone-900 text-white font-sans text-xs font-bold uppercase tracking-widest hover:shadow-2xl hover:-translate-y-1 hover:bg-stone-800 transition-all rounded-full flex items-center justify-center gap-2 w-full md:w-auto">
+    <i data-lucide="activity" class="w-4 h-4 text-gold-500"></i> Take The Kinetic Diagnostic
+  </a>
+  <div class="flex flex-col items-center gap-2">
+    <p class="text-[10px] uppercase tracking-widest text-stone-400 font-bold">Free Diagnostic • No Email Required to Start</p>
+    <a href="https://sovereign.liveadaptiv.com" target="_blank" class="text-[10px] font-bold uppercase tracking-widest text-stone-400 hover:text-gold-600 transition-colors border-b border-transparent hover:border-gold-600 pb-0.5 mt-2">Or access free acute rescue tools</a>
+  </div>
 </div>
-<p class="mt-6 text-[10px] uppercase tracking-widest text-stone-400 animate-fade-up delay-300">
-Free Diagnostic • No Email Required to Start
-</p>
+
+<div class="pt-16 mt-16 border-t border-stone-200 animate-fade-up delay-300 w-full max-w-3xl mx-auto">
+  <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400 mb-8">Methodology Forged On The Frontlines Of</p>
+  <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+    <span class="font-serif italic text-xl md:text-2xl text-stone-800">Clinical Psychiatry</span>
+    <span class="hidden md:block w-1.5 h-1.5 rounded-full bg-gold-500"></span>
+    <span class="font-serif italic text-xl md:text-2xl text-stone-800">Maximum Security</span>
+    <span class="hidden md:block w-1.5 h-1.5 rounded-full bg-gold-500"></span>
+    <span class="font-serif italic text-xl md:text-2xl text-stone-800">Executive Leadership</span>
+  </div>
+</div>
+
 </header>
-<section id="ecosystem" class="py-24 bg-stone-100 px-6 border-t border-stone-200">
+
+<section id="ecosystem" class="py-24 bg-stone-100 px-6 border-t border-stone-200 mt-12">
 <div class="max-w-6xl mx-auto">
 <div class="text-center mb-20">
 <h2 class="font-serif text-4xl italic text-stone-900 mb-4">The Ecosystem</h2>
@@ -195,11 +207,15 @@ Book Session
 </div>
 </div>
 </section>
-<section id="enterprise" class="py-24 px-6 bg-stone-900 border-t border-stone-800 text-stone-300">
-<div class="max-w-6xl mx-auto">
+
+<section id="enterprise" class="py-24 px-6 bg-stone-900 border-t border-stone-800 text-stone-300 relative overflow-hidden" style="background-image: radial-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px); background-size: 32px 32px;">
+<div class="absolute top-1/2 left-0 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-3xl pointer-events-none transform -translate-y-1/2 -translate-x-1/4"></div>
+<div class="absolute top-0 right-0 w-[400px] h-[400px] bg-stone-700/10 rounded-full blur-3xl pointer-events-none"></div>
+
+<div class="max-w-6xl mx-auto relative z-10">
 <div class="flex flex-col lg:flex-row gap-16 items-center">
 <div class="lg:w-1/2">
-<span class="inline-block py-1 px-3 border border-stone-700 rounded-full text-[10px] uppercase tracking-[0.2em] text-gold-500 mb-6">B2B / Organizational Architecture</span>
+<span class="inline-block py-1 px-3 border border-stone-700 rounded-full text-[10px] uppercase tracking-[0.2em] text-gold-500 mb-6 bg-stone-900/50">B2B / Organizational Architecture</span>
 <h2 class="font-serif text-4xl md:text-5xl italic text-white mb-6">Enterprise & Clinical Teams</h2>
 <p class="text-stone-400 leading-relaxed font-light mb-6 text-lg">
 We do not do "wellness seminars." We install tech-enabled resilience operating systems for high-liability environments.
@@ -207,13 +223,13 @@ We do not do "wellness seminars." We install tech-enabled resilience operating s
 <p class="text-stone-400 leading-relaxed font-light mb-10 text-lg">
 If your team is bleeding efficiency due to high-friction energy, imposter syndrome, or clinical burnout, we provide the architecture to stop the leak. Every engagement includes proprietary interactive Web Apps for real-time regulation.
 </p>
-<a href="mailto:alex@liveadaptiv.com?subject=Enterprise Resilience Proposal Request" class="inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-stone-900 font-bold rounded-full text-[10px] uppercase tracking-widest hover:bg-gold-400 transition-colors">
+<a href="mailto:alex@liveadaptiv.com?subject=Enterprise Resilience Proposal Request" class="inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-stone-900 font-bold rounded-full text-[10px] uppercase tracking-widest hover:bg-gold-400 transition-colors shadow-lg">
 <i data-lucide="briefcase" class="w-4 h-4"></i> Request Corporate Proposal
 </a>
 </div>
 <div class="lg:w-1/2 grid sm:grid-cols-2 gap-6 w-full">
-<div class="p-8 border border-stone-700 rounded-2xl bg-stone-800/50 hover:bg-stone-800 transition-colors flex flex-col">
-<div class="w-12 h-12 bg-stone-900 rounded-xl flex items-center justify-center text-gold-400 border border-stone-700 mb-6 shrink-0">
+<div class="p-8 border border-stone-700 rounded-2xl bg-stone-800/80 backdrop-blur-sm hover:bg-stone-800 transition-colors flex flex-col shadow-xl">
+<div class="w-12 h-12 bg-stone-900 rounded-xl flex items-center justify-center text-gold-400 border border-stone-700 mb-6 shrink-0 shadow-inner">
 <i data-lucide="building-2" class="w-6 h-6"></i>
 </div>
 <h3 class="font-serif text-2xl text-white italic mb-2">The Kinetic Leader</h3>
@@ -222,8 +238,8 @@ If your team is bleeding efficiency due to high-friction energy, imposter syndro
 Designed for incoming recruits and high-performing associates. Turns "High-Friction Energy" into "Flow." Features live tech-enabled boundary scripting to prevent early attrition.
 </p>
 </div>
-<div class="p-8 border border-stone-700 rounded-2xl bg-stone-800/50 hover:bg-stone-800 transition-colors flex flex-col">
-<div class="w-12 h-12 bg-stone-900 rounded-xl flex items-center justify-center text-silver-400 border border-stone-700 mb-6 shrink-0">
+<div class="p-8 border border-stone-700 rounded-2xl bg-stone-800/80 backdrop-blur-sm hover:bg-stone-800 transition-colors flex flex-col shadow-xl">
+<div class="w-12 h-12 bg-stone-900 rounded-xl flex items-center justify-center text-silver-400 border border-stone-700 mb-6 shrink-0 shadow-inner">
 <i data-lucide="cross" class="w-6 h-6"></i>
 </div>
 <h3 class="font-serif text-2xl text-white italic mb-2">Vital Sign Protocol</h3>
@@ -236,6 +252,7 @@ Built for high-acuity medical and psychiatric teams. Focuses on crisis regulatio
 </div>
 </div>
 </section>
+
 <section class="py-20 px-6 max-w-4xl mx-auto border-t border-stone-200">
 <div class="bg-stone-100 p-8 rounded-2xl border border-stone-200">
 <span class="text-[10px] uppercase tracking-[0.2em] text-gold-600 mb-3 block">For When the Friction Hits Now</span>
