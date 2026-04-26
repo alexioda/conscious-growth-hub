@@ -41,27 +41,54 @@ fadeUp: {
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 html { scroll-behavior: smooth; }
+/* Prevent scrolling when mobile menu is open */
+body.menu-open { overflow: hidden; }
 </style>
 </head>
 <body class="bg-stone-50 text-stone-900 font-sans antialiased">
+
 <nav class="fixed w-full bg-stone-50/90 backdrop-blur-md border-b border-stone-200 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center">
-<div class="flex items-center gap-2 shrink-0">
-<div class="w-8 h-8 bg-stone-900 text-white flex items-center justify-center font-serif italic text-lg">A</div>
-<span class="font-serif text-xl tracking-wide font-semibold text-stone-900 hidden sm:block">LiveAdaptiv</span>
-</div>
-<div class="hidden lg:flex items-center gap-5 xl:gap-8 text-[11px] font-bold text-stone-500 uppercase tracking-wider">
-<a href="https://audit.liveadaptiv.com" target="_blank" class="text-gold-600 hover:text-gold-700 transition-colors flex items-center gap-1 whitespace-nowrap">
-<i data-lucide="activity" class="w-3 h-3"></i> Start
-</a>
-<a href="#philosophy" class="hover:text-stone-900 transition-colors whitespace-nowrap">Philosophy</a>
-<a href="#ecosystem" class="hover:text-stone-900 transition-colors whitespace-nowrap">Ecosystem</a>
-<a href="#enterprise" class="hover:text-stone-900 transition-colors whitespace-nowrap">Enterprise</a>
-<a href="#architecture" class="hover:text-stone-900 transition-colors whitespace-nowrap">Architecture</a>
-<a href="dashboard.html" class="hover:text-stone-900 transition-colors whitespace-nowrap">Dashboard</a>
-</div>
-</div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center">
+    
+    <div class="flex-1 flex items-center gap-2 relative z-50">
+      <div class="w-8 h-8 bg-stone-900 text-white flex items-center justify-center font-serif italic text-lg">A</div>
+      <span class="font-serif text-xl tracking-wide font-semibold text-stone-900 hidden sm:block">LiveAdaptiv</span>
+    </div>
+
+    <div class="hidden lg:flex items-center justify-center gap-5 xl:gap-8 text-[11px] font-bold text-stone-500 uppercase tracking-wider shrink-0">
+      <a href="https://audit.liveadaptiv.com" target="_blank" class="text-gold-600 hover:text-gold-700 transition-colors flex items-center gap-1 whitespace-nowrap">
+        <i data-lucide="activity" class="w-3 h-3"></i> Start
+      </a>
+      <a href="#philosophy" class="hover:text-stone-900 transition-colors whitespace-nowrap">Philosophy</a>
+      <a href="#ecosystem" class="hover:text-stone-900 transition-colors whitespace-nowrap">Ecosystem</a>
+      <a href="#enterprise" class="hover:text-stone-900 transition-colors whitespace-nowrap">Enterprise</a>
+      <a href="#architecture" class="hover:text-stone-900 transition-colors whitespace-nowrap">Architecture</a>
+      <a href="dashboard.html" class="hover:text-stone-900 transition-colors whitespace-nowrap">Dashboard</a>
+    </div>
+
+    <div class="flex-1 flex justify-end relative z-50">
+      <button id="mobile-menu-btn" class="lg:hidden p-2 -mr-2 text-stone-900 hover:text-gold-600 transition-colors" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    
+  </div>
 </nav>
+
+<div id="mobile-menu" class="fixed inset-0 bg-stone-50/98 backdrop-blur-xl z-40 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+  <div class="flex flex-col items-center gap-8 text-center w-full px-6">
+    <a href="https://audit.liveadaptiv.com" target="_blank" class="mobile-link inline-flex items-center justify-center gap-2 w-full max-w-xs py-4 bg-stone-900 text-white font-sans text-[11px] font-bold uppercase tracking-widest rounded-full shadow-lg hover:bg-stone-800 transition-all">
+      <i data-lucide="activity" class="w-4 h-4 text-gold-500"></i> Take Diagnostic
+    </a>
+    <div class="w-12 h-[1px] bg-stone-300 my-2"></div>
+    <a href="#philosophy" class="mobile-link font-serif text-3xl text-stone-900 italic hover:text-gold-600 transition-colors">Philosophy</a>
+    <a href="#ecosystem" class="mobile-link font-serif text-3xl text-stone-900 italic hover:text-gold-600 transition-colors">Ecosystem</a>
+    <a href="#enterprise" class="mobile-link font-serif text-3xl text-stone-900 italic hover:text-gold-600 transition-colors">Enterprise</a>
+    <a href="#architecture" class="mobile-link font-serif text-3xl text-stone-900 italic hover:text-gold-600 transition-colors">Architecture</a>
+    <a href="dashboard.html" class="mobile-link font-serif text-3xl text-stone-900 italic hover:text-gold-600 transition-colors">Dashboard</a>
+  </div>
+</div>
+
 <header class="pt-48 pb-32 px-6 max-w-4xl mx-auto text-center">
 <span class="inline-block py-1 px-3 border border-stone-300 rounded-full text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-8 animate-fade-up">Energy Leadership™ Integration</span>
 <h1 class="text-5xl md:text-7xl font-serif italic text-stone-900 mb-8 leading-[1.1] animate-fade-up delay-100">
@@ -292,5 +319,40 @@ I take survival protocols from the psychiatric frontlines and translate them int
 </div>
 </div>
 </footer>
+
+<script>
+  lucide.createIcons();
+
+  // Mobile Menu Logic
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+      mobileBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+      document.body.classList.add('menu-open');
+    } else {
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+      mobileBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+      document.body.classList.remove('menu-open');
+    }
+    lucide.createIcons();
+  }
+
+  mobileBtn.addEventListener('click', toggleMenu);
+  
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMenuOpen) toggleMenu();
+    });
+  });
+</script>
+
 </body>
 </html>
