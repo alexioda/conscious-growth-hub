@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/metabolize", "destination": "/metabolize.html" }
+  ]
+}
